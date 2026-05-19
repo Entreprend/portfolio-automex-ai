@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Automex-AI — Web · Automatisation · Audit IA</title>
+<meta name="description" content="Nous construisons des systèmes web intelligents pour les PME et startups ambitieuses. Sites IA, automatisations et audits technologiques — livrés avec précision."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="nav">
+  <a href="#" class="nav-logo">
+    Automex<span>AI</span>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#automations">Automatisations</a></li>
+      <li><a href="#audit">Audit</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-btn">Démarrer</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#projets" onclick="closeMobile()">Projets</a>
+  <a href="#automations" onclick="closeMobile()">Automatisations</a>
+  <a href="#audit" onclick="closeMobile()">Audit</a>
+  <a href="#apropos" onclick="closeMobile()">À propos</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+  <a href="#contact" class="mobile-cta" onclick="closeMobile()">Démarrer →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-ornament" aria-hidden="true">◆</div>
+
+  <div class="hero-inner">
+    <div class="hero-tag">
+      <span class="tag-pulse"></span>
+      Disponible · Basé à Cotonou · Clients francophones & internationaux
+    </div>
+
+    <h1 class="hero-title">
+      Votre business<br>
+      mérite un site qui<br>
+      <em>travaille pour vous.</em>
+    </h1>
+
+    <div class="hero-divider">
+      <span class="div-line"></span>
+      <span class="div-mark">◆</span>
+      <span class="div-line"></span>
+    </div>
+
+    <p class="hero-desc">
+      Nous concevons des sites web avec IA intégrée, des automatisations intelligentes et des audits technologiques pour les PME et startups qui veulent avancer sans se perdre dans la technique.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#projets" class="btn-primary">Découvrir nos réalisations</a>
+      <a href="#contact" class="btn-outline">Démarrer un projet →</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hstat">
+      <span class="hstat-n" data-target="4">0</span>
+      <span class="hstat-l">Projets livrés</span>
+    </div>
+    <div class="hstat-sep">◆</div>
+    <div class="hstat">
+      <span class="hstat-n" data-target="2">0</span>
+      <span class="hstat-l">Semaines · délai garanti</span>
+    </div>
+    <div class="hstat-sep">◆</div>
+    <div class="hstat">
+      <span class="hstat-n">3</span>
+      <span class="hstat-l">Expertises complémentaires</span>
+    </div>
+    <div class="hstat-sep">◆</div>
+    <div class="hstat">
+      <span class="hstat-n" data-target="24">0</span>
+      <span class="hstat-l">h/24 votre IA travaille</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header">
+    <p class="section-eyebrow">
+      <span class="orn">◆</span> Ce que nous faisons
+    </p>
+    <h2 class="section-title">Trois expertises.<br><em>Un seul partenaire.</em></h2>
+    <p class="section-sub">Vous n'avez pas besoin de trois prestataires différents. Nous couvrons l'ensemble de votre stack technologique — de la conception à l'optimisation.</p>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-orn">01</div>
+      <div class="service-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <h3>Sites Web <em>+ IA Intégrée</em></h3>
+      <p>Votre site ne se contente plus d'exister. Il répond à vos clients à 23h, qualifie vos prospects, prend vos réservations — sans que vous leviez le petit doigt.</p>
+      <ul class="service-list">
+        <li>Chatbot IA personnalisé selon votre activité</li>
+        <li>Design responsive sur mesure</li>
+        <li>Déploiement et formation inclus</li>
+        <li>Résultats mesurables en 30 jours</li>
+      </ul>
+      <div class="service-price">À partir de <strong>1 200€</strong></div>
+      <a href="#contact" class="service-link">Démarrer ce projet →</a>
+    </div>
+
+    <div class="service-card featured">
+      <div class="service-badge">Le plus demandé</div>
+      <div class="service-orn">02</div>
+      <div class="service-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+      </div>
+      <h3>Automatisation <em>IA</em></h3>
+      <p>Vos tâches répétitives — emails, rapports, qualification de leads, réponses clients — automatisées par l'IA. Vous récupérez des heures chaque semaine pour vous concentrer sur ce qui compte.</p>
+      <ul class="service-list">
+        <li>Audit de vos processus chronophages</li>
+        <li>Automatisation sur mesure avec l'IA</li>
+        <li>Tableaux de bord et rapports PDF auto</li>
+        <li>Maintenance et optimisation mensuelle</li>
+      </ul>
+      <div class="service-price">À partir de <strong>800€</strong> + <strong>40€/mois</strong></div>
+      <a href="#contact" class="service-link">Démarrer ce projet →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-orn">03</div>
+      <div class="service-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      </div>
+      <h3>Audit <em>Technologique</em></h3>
+      <p>Votre site ou application a été construit vite — peut-être avec l'IA, peut-être par un junior. Vous voulez savoir si c'est solide avant d'y investir davantage. On analyse, on diagnostique, on recommande.</p>
+      <ul class="service-list">
+        <li>Audit de performance et sécurité</li>
+        <li>Analyse du code et de l'architecture</li>
+        <li>Rapport détaillé avec priorités claires</li>
+        <li>Plan d'action chiffré et actionnable</li>
+      </ul>
+      <div class="service-price">À partir de <strong>350€</strong></div>
+      <a href="#contact" class="service-link">Demander un audit →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJETS -->
+<section class="projets" id="projets">
+  <div class="section-header">
+    <p class="section-eyebrow">
+      <span class="orn">◆</span> Réalisations
+    </p>
+    <h2 class="section-title">Des systèmes<br><em>qui travaillent.</em></h2>
+  </div>
+
+  <div class="projets-list">
+
+    <!-- Projet 01 — Bistrot Lumière -->
+    <div class="projet-item">
+      <div class="projet-num">01</div>
+      <a href="https://bistrot-lumiere.vercel.app/" target="_blank" rel="noopener" class="projet-img img-bistrot">
+        <div class="projet-hover"><span>Visiter le site ↗</span></div>
+      </a>
+      <div class="projet-info">
+        <div class="projet-meta">
+          <span class="meta-type">Site Web + Chatbot IA</span>
+          <span class="meta-dot">◆</span>
+          <span class="meta-sector">Restaurant Gastronomique</span>
+        </div>
+        <h3 class="projet-title">Le Bistrot <em>Lumière</em></h3>
+        <p class="projet-desc">Ce restaurant parisien perdait des réservations chaque soir après 22h — le téléphone sonnait dans le vide. Aujourd'hui, leur assistante IA répond aux questions sur la carte, les horaires et les réservations 24h/24, avec l'élégance de la maison.</p>
+        <div class="projet-result">
+          <span class="res-orn">◆</span>
+          <div>
+            <p class="res-label">Impact mesuré</p>
+            <p class="res-val">−80% d'appels non décrochés · Réservations prises automatiquement la nuit</p>
+          </div>
+        </div>
+        <div class="projet-stack">
+          <span>HTML/CSS</span><span>JavaScript</span><span>Claude API</span><span>Vercel</span>
+        </div>
+        <a href="https://bistrot-lumiere.vercel.app/" target="_blank" rel="noopener" class="projet-visit-btn">Visiter le site ↗</a>
+      </div>
+    </div>
+
+    <!-- Projet 02 — Nexus Analytics -->
+    <div class="projet-item reverse">
+      <div class="projet-num">02</div>
+      <a href="https://dashboard-ia-woad.vercel.app/" target="_blank" rel="noopener" class="projet-img img-dashboard">
+        <div class="projet-hover"><span>Visiter le site ↗</span></div>
+      </a>
+      <div class="projet-info">
+        <div class="projet-meta">
+          <span class="meta-type">Dashboard IA + Rapport PDF</span>
+          <span class="meta-dot">◆</span>
+          <span class="meta-sector">E-commerce</span>
+        </div>
+        <h3 class="projet-title">Nexus <em>Analytics</em></h3>
+        <p class="projet-desc">Le gérant passait 3 heures chaque lundi à compiler ses chiffres dans Excel. Désormais, son dashboard lui dit en temps réel ce qui fonctionne, ce qui baisse — avec une analyse IA en français et un rapport PDF généré en un seul clic.</p>
+        <div class="projet-result">
+          <span class="res-orn">◆</span>
+          <div>
+            <p class="res-label">Impact mesuré</p>
+            <p class="res-val">3h de travail manuel → 1 clic · Décisions basées sur des données réelles</p>
+          </div>
+        </div>
+        <div class="projet-stack">
+          <span>Chart.js</span><span>jsPDF</span><span>Claude API</span><span>Vercel</span>
+        </div>
+        <a href="https://dashboard-ia-woad.vercel.app/" target="_blank" rel="noopener" class="projet-visit-btn">Visiter le site ↗</a>
+      </div>
+    </div>
+
+    <!-- Projet 03 — Clara Fontaine -->
+    <div class="projet-item">
+      <div class="projet-num">03</div>
+      <a href="https://landing-coach-kappa.vercel.app/" target="_blank" rel="noopener" class="projet-img img-coach">
+        <div class="projet-hover"><span>Visiter le site ↗</span></div>
+      </a>
+      <div class="projet-info">
+        <div class="projet-meta">
+          <span class="meta-type">Landing Page + Diagnostic IA</span>
+          <span class="meta-dot">◆</span>
+          <span class="meta-sector">Coaching & Consulting</span>
+        </div>
+        <h3 class="projet-title">Clara Fontaine <em>Coaching</em></h3>
+        <p class="projet-desc">Son site avait du trafic, zéro conversion. Nous avons intégré un générateur de diagnostic IA : le visiteur décrit son problème de leadership, l'IA génère un plan d'action personnalisé en 5 secondes. Le prospect reçoit de la valeur avant même de payer.</p>
+        <div class="projet-result">
+          <span class="res-orn">◆</span>
+          <div>
+            <p class="res-label">Impact mesuré</p>
+            <p class="res-val">+340% de demandes de session découverte · Leads qualifiés automatiquement</p>
+          </div>
+        </div>
+        <div class="projet-stack">
+          <span>HTML/CSS</span><span>JavaScript</span><span>Claude API</span><span>Vercel</span>
+        </div>
+        <a href="https://landing-coach-kappa.vercel.app/" target="_blank" rel="noopener" class="projet-visit-btn">Visiter le site ↗</a>
+      </div>
+    </div>
+
+    <!-- Projet 04 — ImmoPremium -->
+    <div class="projet-item reverse">
+      <div class="projet-num">04</div>
+      <a href="https://immo-premium.vercel.app/" target="_blank" rel="noopener" class="projet-img img-immo">
+        <div class="projet-hover"><span>Visiter le site ↗</span></div>
+      </a>
+      <div class="projet-info">
+        <div class="projet-meta">
+          <span class="meta-type">Site Immobilier + Chatbot IA</span>
+          <span class="meta-dot">◆</span>
+          <span class="meta-sector">Immobilier</span>
+        </div>
+        <h3 class="projet-title">Immo<em>Premium</em></h3>
+        <p class="projet-desc">Plateforme immobilière complète pour une agence au Bénin. Catalogue de propriétés avec filtres, fiches détaillées et chatbot IA intégré qui guide les acheteurs selon leur budget et leurs critères — disponible 24h/24 pour qualifier les leads.</p>
+        <div class="projet-result">
+          <span class="res-orn">◆</span>
+          <div>
+            <p class="res-label">Impact mesuré</p>
+            <p class="res-val">Qualification automatique des acheteurs · Leads filtrés par budget avant le 1er appel</p>
+          </div>
+        </div>
+        <div class="projet-stack">
+          <span>HTML/CSS</span><span>JavaScript</span><span>Claude API</span><span>Vercel</span>
+        </div>
+        <a href="https://immo-premium.vercel.app/" target="_blank" rel="noopener" class="projet-visit-btn">Visiter le site ↗</a>
+      </div>
+    </div>
+
+    <!-- Projet 05 — Automex-AI Studio -->
+    <div class="projet-item">
+      <div class="projet-num">05</div>
+      <div class="projet-img img-agence">
+        <div class="projet-hover-disabled"></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-meta">
+          <span class="meta-type">Landing Page + Générateur Copy IA</span>
+          <span class="meta-dot">◆</span>
+          <span class="meta-sector">Agence IA</span>
+        </div>
+        <h3 class="projet-title">Automex-AI <em>Studio</em></h3>
+        <p class="projet-desc">Notre propre vitrine. Nous avons appliqué à nous-mêmes ce que nous proposons à nos clients : un générateur de copywriting IA où le prospect tape son activité et obtient instantanément l'accroche parfaite pour son business. Notre meilleur outil commercial.</p>
+        <div class="projet-result">
+          <span class="res-orn">◆</span>
+          <div>
+            <p class="res-label">Usage</p>
+            <p class="res-val">Chaque prospect voit en direct la valeur de l'IA pour son activité · Taux de contact ×3</p>
+          </div>
+        </div>
+        <div class="projet-stack">
+          <span>HTML/CSS</span><span>JavaScript</span><span>Claude API</span><span>Vercel</span>
+        </div>
+        <span class="projet-current-badge">◆ Vous êtes ici</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AUTOMATISATIONS -->
+<section class="automations" id="automations">
+  <div class="section-header">
+    <p class="section-eyebrow">
+      <span class="orn">◆</span> Automatisations IA
+    </p>
+    <h2 class="section-title">Des workflows qui<br><em>tournent seuls.</em></h2>
+    <p class="section-sub">Ces automatisations n8n remplacent des heures de travail manuel chaque semaine. Chaque flux est conçu sur mesure selon les outils et processus du client.</p>
+  </div>
+
+  <div class="auto-grid">
+
+    <div class="auto-card">
+      <div class="auto-img img-auto1"></div>
+      <div class="auto-info">
+        <div class="auto-tags">
+          <span>n8n</span><span>RAG</span><span>Google Sheets</span><span>Gmail</span><span>Calendar</span>
+        </div>
+        <h3 class="auto-title">Agent IA <em>Immobilier</em></h3>
+        <p class="auto-desc">Un agent IA complet pour une agence immobilière. Il répond aux questions des prospects via chat (RAG sur les biens disponibles), ajoute les leads dans Google Sheets, planifie des visites dans Google Calendar et envoie des confirmations par Gmail — entièrement automatisé.</p>
+        <div class="auto-result">
+          <span class="res-orn">◆</span>
+          <div>
+            <p class="res-label">Ce que ça remplace</p>
+            <p class="res-val">Réception des demandes · Qualification · Prise de RDV · Emails de suivi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-img img-auto2"></div>
+      <div class="auto-info">
+        <div class="auto-tags">
+          <span>n8n</span><span>Telegram</span><span>Groq</span><span>Mémoire IA</span>
+        </div>
+        <h3 class="auto-title">Support Client <em>Telegram</em></h3>
+        <p class="auto-desc">Bot Telegram avec Agent IA et mémoire de conversation. Le client envoie un message, l'IA répond avec le contexte des échanges précédents. Idéal pour le SAV, le support technique ou l'onboarding de nouveaux clients — disponible 24h/24.</p>
+        <div class="auto-result">
+          <span class="res-orn">◆</span>
+          <div>
+            <p class="res-label">Ce que ça remplace</p>
+            <p class="res-val">Réponses manuelles aux clients · Support de premier niveau · FAQ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-img img-auto3"></div>
+      <div class="auto-info">
+        <div class="auto-tags">
+          <span>n8n</span><span>Google Sheets</span><span>LLM</span><span>Gmail</span>
+        </div>
+        <h3 class="auto-title">Prospection Email <em>IA</em></h3>
+        <p class="auto-desc">Flux de prospection automatisé : lit une liste de prospects dans Google Sheets, génère un email personnalisé par LLM pour chaque contact, vérifie si déjà contacté, envoie via Gmail et met à jour le statut dans le tableau. Zéro copier-coller.</p>
+        <div class="auto-result">
+          <span class="res-orn">◆</span>
+          <div>
+            <p class="res-label">Ce que ça remplace</p>
+            <p class="res-val">Rédaction manuelle · Envoi un par un · Suivi dans Excel</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="auto-cta">
+    <p>Vous avez des tâches répétitives à automatiser ?</p>
+    <a href="#contact" class="btn-primary">Discutons de votre cas →</a>
+  </div>
+
+</section>
+
+<!-- AUDIT -->
+<section class="audit-section" id="audit">
+  <div class="section-header">
+    <p class="section-eyebrow">
+      <span class="orn">◆</span> Audit Technologique
+    </p>
+    <h2 class="section-title">Exemple de rapport<br><em>d'audit livré.</em></h2>
+    <p class="section-sub">Voici le format exact de ce que vous recevez. Un rapport structuré, chiffré et actionnable — pas un document générique.</p>
+  </div>
+
+  <div class="audit-report">
+    <div class="audit-header">
+      <div class="audit-header-left">
+        <p class="audit-tag">Rapport d'audit · Exemple fictif</p>
+        <h3 class="audit-site">boutique-example.fr</h3>
+        <p class="audit-date">Audité le 12 mai 2025 · Durée : 4 heures</p>
+      </div>
+      <div class="audit-score-wrap">
+        <div class="audit-score-ring">
+          <svg viewBox="0 0 80 80" width="80" height="80">
+            <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(201,169,110,0.1)" stroke-width="6"/>
+            <circle cx="40" cy="40" r="34" fill="none" stroke="#C9A96E" stroke-width="6"
+              stroke-dasharray="148 213" stroke-dashoffset="53" stroke-linecap="round"/>
+          </svg>
+          <div class="score-num">62<span>/100</span></div>
+        </div>
+        <p class="score-label">Score global</p>
+      </div>
+    </div>
+
+    <div class="audit-scores">
+      <div class="audit-score-item">
+        <div class="asi-top">
+          <span class="asi-label">Performance</span>
+          <span class="asi-val bad">48/100</span>
+        </div>
+        <div class="asi-bar"><div class="asi-fill" style="width:48%;background:#E55A25"></div></div>
+        <p class="asi-note">Images non compressées (+2.4s de chargement). Aucun cache configuré.</p>
+      </div>
+      <div class="audit-score-item">
+        <div class="asi-top">
+          <span class="asi-label">SEO</span>
+          <span class="asi-val mid">71/100</span>
+        </div>
+        <div class="asi-bar"><div class="asi-fill" style="width:71%;background:#C9A96E"></div></div>
+        <p class="asi-note">Balises meta manquantes sur 8 pages. Pas de sitemap.xml.</p>
+      </div>
+      <div class="audit-score-item">
+        <div class="asi-top">
+          <span class="asi-label">Sécurité</span>
+          <span class="asi-val bad">55/100</span>
+        </div>
+        <div class="asi-bar"><div class="asi-fill" style="width:55%;background:#E55A25"></div></div>
+        <p class="asi-note">HTTPS non forcé. Headers de sécurité absents. Dépendances obsolètes.</p>
+      </div>
+      <div class="audit-score-item">
+        <div class="asi-top">
+          <span class="asi-label">Accessibilité</span>
+          <span class="asi-val good">84/100</span>
+        </div>
+        <div class="asi-bar"><div class="asi-fill" style="width:84%;background:#6BAF7A"></div></div>
+        <p class="asi-note">Bon contraste. Quelques balises alt manquantes sur les images.</p>
+      </div>
+    </div>
+
+    <div class="audit-findings">
+      <h4 class="findings-title">Problèmes identifiés — par priorité</h4>
+      <div class="finding-item critical">
+        <div class="fi-badge">Critique</div>
+        <div class="fi-body">
+          <p class="fi-title">Images non optimisées — +3.2s sur le temps de chargement</p>
+          <p class="fi-desc">17 images dépassent 1MB. Sur mobile, le site met 6.4s à charger. Au-delà de 3s, 53% des visiteurs quittent la page (source: Google). Perte estimée : 30 à 40% des visiteurs mobiles.</p>
+          <p class="fi-fix">→ Convertir en WebP + activer la compression lazy-load. Gain estimé : −2.8s</p>
+        </div>
+      </div>
+      <div class="finding-item high">
+        <div class="fi-badge">Élevé</div>
+        <div class="fi-body">
+          <p class="fi-title">Aucun certificat HTTPS forcé</p>
+          <p class="fi-desc">Le site est accessible en HTTP non sécurisé. Chrome affiche "Non sécurisé" aux visiteurs, ce qui détruit la confiance et pénalise le référencement Google.</p>
+          <p class="fi-fix">→ Forcer la redirection HTTP → HTTPS côté serveur. Correction : 15 minutes.</p>
+        </div>
+      </div>
+      <div class="finding-item medium">
+        <div class="fi-badge">Moyen</div>
+        <div class="fi-body">
+          <p class="fi-title">Absence de balises meta description sur 8 pages</p>
+          <p class="fi-desc">Google génère ses propres extraits, souvent peu pertinents. Les taux de clic en souffrent directement.</p>
+          <p class="fi-fix">→ Rédiger 8 meta descriptions ciblées avec mots-clés prioritaires.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="audit-plan">
+      <h4 class="findings-title">Plan d'action — 3 semaines</h4>
+      <div class="plan-grid">
+        <div class="plan-week">
+          <p class="pw-label">Semaine 1 · Urgent</p>
+          <ul>
+            <li>Optimisation de toutes les images</li>
+            <li>Activation HTTPS forcé</li>
+            <li>Configuration des headers sécurité</li>
+          </ul>
+          <p class="pw-impact">Impact estimé : +28 pts performance</p>
+        </div>
+        <div class="plan-week">
+          <p class="pw-label">Semaine 2 · Important</p>
+          <ul>
+            <li>Rédaction des meta descriptions</li>
+            <li>Génération du sitemap.xml</li>
+            <li>Mise à jour des dépendances</li>
+          </ul>
+          <p class="pw-impact">Impact estimé : +15 pts SEO</p>
+        </div>
+        <div class="plan-week">
+          <p class="pw-label">Semaine 3 · Optimisation</p>
+          <ul>
+            <li>Configuration du cache navigateur</li>
+            <li>Minification CSS/JS</li>
+            <li>Ajout des balises alt manquantes</li>
+          </ul>
+          <p class="pw-impact">Impact estimé : Score global 85+</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="audit-footer-bar">
+      <p>Ce rapport est un <strong>exemple fictif</strong> du format livré. Votre audit sera basé sur votre site réel.</p>
+      <a href="#contact" class="btn-primary">Demander mon audit →</a>
+    </div>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section class="apropos" id="apropos">
+  <div class="apropos-inner">
+    <div class="apropos-left">
+      <p class="section-eyebrow">
+        <span class="orn">◆</span> Pourquoi nous
+      </p>
+      <h2 class="section-title">Informaticien de<br>formation.<br><em>Bâtisseur par vocation.</em></h2>
+      <p>Diplômé en informatique de gestion, je comprends les systèmes d'information dans leur globalité — pas seulement le code, mais les processus métier, les flux de données et les décisions qui en découlent.</p>
+      <p>Avec l'émergence du vibe coding et de l'IA générative, j'ai élargi ma pratique : construire des solutions web intelligentes, les automatiser, et surtout — les auditer. Car un site construit vite avec l'IA peut cacher des failles que seul un regard formé peut détecter.</p>
+      <p>Automex-AI, c'est cette vision : un partenaire technologique qui construit bien, automatise intelligemment, et valide rigoureusement.</p>
+
+      <div class="apropos-vals">
+        <div class="val-item">
+          <span class="val-orn">◆</span>
+          <div>
+            <p class="val-title">Rigueur technique</p>
+            <p class="val-sub">Chaque ligne livrée est testée, documentée et maintainable.</p>
+          </div>
+        </div>
+        <div class="val-item">
+          <span class="val-orn">◆</span>
+          <div>
+            <p class="val-title">Orienté résultats</p>
+            <p class="val-sub">On mesure l'impact de chaque projet — pas seulement la beauté du design.</p>
+          </div>
+        </div>
+        <div class="val-item">
+          <span class="val-orn">◆</span>
+          <div>
+            <p class="val-title">Disponibilité réelle</p>
+            <p class="val-sub">Réponse sous 24h. Toujours. Ce n'est pas une promesse marketing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="apropos-right">
+      <div class="skills-panel">
+        <p class="skills-title">Stack technologique</p>
+        <div class="skills-group">
+          <p class="sg-label">Développement Web</p>
+          <div class="sg-tags">
+            <span>HTML/CSS avancé</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>Git/GitHub</span>
+            <span>Vercel</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <p class="sg-label">Intelligence Artificielle</p>
+          <div class="sg-tags">
+            <span>Claude API</span>
+            <span>Prompt Engineering</span>
+            <span>Chatbots IA</span>
+            <span>Automatisation LLM</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <p class="sg-label">Audit & Analyse</p>
+          <div class="sg-tags">
+            <span>Audit performance</span>
+            <span>Sécurité web</span>
+            <span>Architecture SI</span>
+            <span>Rapport d'audit</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <p class="sg-label">Outils & Librairies</p>
+          <div class="sg-tags">
+            <span>Chart.js</span>
+            <span>jsPDF</span>
+            <span>Figma</span>
+            <span>Vibe Coding</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="certif-panel">
+        <p class="certif-title">Formation & Expertise</p>
+        <div class="certif-item">
+          <span class="ci-orn">◆</span>
+          <div>
+            <p class="ci-name">Informatique de Gestion</p>
+            <p class="ci-detail">Études supérieures · Systèmes d'information & gestion</p>
+          </div>
+        </div>
+        <div class="certif-item">
+          <span class="ci-orn">◆</span>
+          <div>
+            <p class="ci-name">Spécialisation IA Générative</p>
+            <p class="ci-detail">Claude API · Prompt Engineering · Automatisation LLM</p>
+          </div>
+        </div>
+        <div class="certif-item">
+          <span class="ci-orn">◆</span>
+          <div>
+            <p class="ci-name">Vibe Coding & Audit</p>
+            <p class="ci-detail">Développement assisté IA · Audit de solutions générées</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <p class="section-eyebrow light">
+        <span class="orn">◆</span> Démarrons
+      </p>
+      <h2 class="contact-title">
+        Quel problème<br>
+        résolvons-nous<br>
+        <em>ensemble ?</em>
+      </h2>
+      <p class="contact-sub">Décrivez votre situation en quelques lignes. Nous vous répondons dans les 24 heures avec une proposition concrète — pas un devis générique, une vraie solution à votre vrai problème.</p>
+
+      <div class="contact-details">
+        <div class="cd-item">
+          <span class="cd-orn">◆</span>
+          <div>
+            <p class="cd-label">Localisation</p>
+            <p class="cd-val">Cotonou, Bénin · Clients internationaux</p>
+          </div>
+        </div>
+        <div class="cd-item">
+          <span class="cd-orn">◆</span>
+          <div>
+            <p class="cd-label">Délai de réponse</p>
+            <p class="cd-val">Sous 24 heures · Devis gratuit et sans engagement</p>
+          </div>
+        </div>
+        <div class="cd-item">
+          <span class="cd-orn">◆</span>
+          <div>
+            <p class="cd-label">Marchés</p>
+            <p class="cd-val">France · Belgique · Suisse · Afrique francophone</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/abdoulrazack607@gmail.com" method="POST" onsubmit="handleContact(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Votre nom</label>
+          <input type="text" placeholder="Marie Dupont" required/>
+        </div>
+        <div class="form-group">
+          <label>Email professionnel</label>
+          <input type="email" placeholder="marie@entreprise.fr" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Votre activité</label>
+          <input type="text" placeholder="Restaurant, startup, cabinet conseil…" required/>
+        </div>
+        <div class="form-group">
+          <label>Service souhaité</label>
+          <select required>
+            <option value="" disabled selected>Choisir</option>
+            <option>Site Web + Chatbot IA — dès 1 200€</option>
+            <option>Automatisation IA — dès 800€</option>
+            <option>Audit Technologique — dès 350€</option>
+            <option>Pack complet — devis personnalisé</option>
+            <option>Je ne sais pas encore</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Budget approximatif</label>
+        <select required>
+          <option value="" disabled selected>Choisir</option>
+          <option>350€ – 800€</option>
+          <option>800€ – 1 500€</option>
+          <option>1 500€ – 3 000€</option>
+          <option>3 000€+</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Décrivez votre situation</label>
+        <textarea rows="5" placeholder="Quel problème voulez-vous résoudre ? Qu'est-ce qui vous freine aujourd'hui ? Qu'avez-vous déjà essayé ?" required></textarea>
+      </div>
+      <button type="submit" class="form-submit">
+        Envoyer ma demande
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </button>
+      <p class="form-note">Réponse sous 24h · Sans engagement · 100% confidentiel</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-logo">Automex<em>AI</em></p>
+        <p class="footer-tagline">Web · Automatisation · Audit IA</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#services">Services</a>
+        <a href="#projets">Projets</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-divider">
+      <span class="orn">◆</span>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Automex-AI · Cotonou, Bénin</p>
+      <p>Sites Web · Automatisation IA · Audit Technologique</p>
+    </div>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
