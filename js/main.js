@@ -80,34 +80,34 @@ toReveal.forEach(sel => {
 });
 
 /* ── CONTACT ── */
-async function handleContact(e) {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('.form-submit');
-  const originalText = btn.innerHTML;
-  
-  btn.innerHTML = 'Envoi en cours...';
-  btn.disabled = true;
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.form-submit');
+    btn.innerHTML = 'Envoi en cours...';
+    btn.disabled = true;
 
-  try {
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
+    try {
+      const response = await fetch('https://formspree.io/f/mredbnpa', {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      });
 
-    if (response.ok) {
-      showToast('Message envoyé · Réponse sous 24h.');
-      form.reset();
-    } else {
-      showToast('Erreur · Réessayez ou écrivez directement à abdoulrazack607@gmail.com');
+      if (response.ok) {
+        window.location.href = 'https://portfolio-automex-ai.vercel.app/merci.html';
+      } else {
+        btn.innerHTML = 'Envoyer ma demande <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>';
+        btn.disabled = false;
+        alert('Erreur. Écrivez directement à abdoulrazack607@gmail.com');
+      }
+    } catch(err) {
+      btn.innerHTML = 'Envoyer ma demande';
+      btn.disabled = false;
+      alert('Erreur réseau. Écrivez à abdoulrazack607@gmail.com');
     }
-  } catch {
-    showToast('Erreur réseau · Écrivez à abdoulrazack607@gmail.com');
-  }
-
-  btn.innerHTML = originalText;
-  btn.disabled = false;
+  });
 }
 function showToast(msg) {
   const t = document.getElementById('toast');
