@@ -339,15 +339,17 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-tag {
-  display: inline-flex; align-items: center; gap: 10px;
+  display: flex; align-items: flex-start; gap: 10px;
   font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--muted); margin-bottom: 52px; font-weight: 400;
+  text-align: left;
 }
 .tag-pulse {
   width: 7px; height: 7px; border-radius: 50%;
   background: var(--gold);
   animation: pulse 2.5s ease-in-out infinite;
   flex-shrink: 0;
+  margin-top: 3px;
 }
 
 .hero-title {
@@ -831,10 +833,19 @@ footer {
   .nav-links, .nav-cta { display: none; }
   .burger { display: flex; }
   .hero { padding: 100px 24px 48px; }
-  .hero-stats { gap: 16px; }
-  .hstat { padding: 0 16px; }
-  .hstat-sep { display: none; }
-  .services, .projets, .apropos, .contact { padding: 80px 24px; }
+  .hero-stats {
+    overflow-x: auto;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+  }
+  .hstat { padding: 0 20px; flex-shrink: 0; }
+  .hstat-n { font-size: 32px; }
+  .hstat-sep { display: flex; flex-shrink: 0; }
+  .services, .projets, .automations, .apropos, .contact { padding: 80px 24px; }
   .projet-info { padding: 32px 24px; }
   .form-row { grid-template-columns: 1fr; }
   footer { padding: 40px 24px; }
