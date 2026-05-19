@@ -468,7 +468,7 @@
 
       <div class="iw-price">
         <div class="iw-price-item">
-          <span class="iw-market">🌍 Afrique francophone</span>
+          <span class="iw-market">Afrique francophone</span>
           <span class="iw-amount">100 000 – 200 000 FCFA</span>
         </div>
         <div class="iw-price-item">
@@ -629,25 +629,25 @@
       </div>
     </div>
 
-    <form class="contact-form" action="https://formspree.io/f/mredbnpa" method="POST" onsubmit="handleContact(event)">
+    <form class="contact-form" action="https://formspree.io/f/mredbnpa" method="POST">
       <div class="form-row">
         <div class="form-group">
           <label>Votre nom</label>
-          <input type="text" placeholder="Marie Dupont" required/>
+          <input type="text" name="nom" placeholder="Marie Dupont" required/>
         </div>
         <div class="form-group">
           <label>Email professionnel</label>
-          <input type="email" placeholder="marie@entreprise.fr" required/>
+          <input type="email" name="email" placeholder="marie@entreprise.fr" required/>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label>Votre activité</label>
-          <input type="text" placeholder="Restaurant, startup, cabinet conseil…" required/>
+          <input type="text" name="activite" placeholder="Restaurant, startup, cabinet conseil…" required/>
         </div>
         <div class="form-group">
           <label>Service souhaité</label>
-          <select required>
+          <select name="service" required>
             <option value="" disabled selected>Choisir</option>
             <option>Site Web + Chatbot IA</option>
             <option>Automatisation IA</option>
@@ -659,7 +659,7 @@
       </div>
       <div class="form-group">
         <label>Budget approximatif</label>
-        <select required>
+        <select name="budget" required>
           <option value="" disabled selected>Choisir</option>
           <option>350€ – 800€</option>
           <option>800€ – 1 500€</option>
@@ -669,7 +669,7 @@
       </div>
       <div class="form-group">
         <label>Décrivez votre situation</label>
-        <textarea rows="5" placeholder="Quel problème voulez-vous résoudre ? Qu'est-ce qui vous freine aujourd'hui ? Qu'avez-vous déjà essayé ?" required></textarea>
+        <textarea name="message" rows="5" placeholder="Quel problème voulez-vous résoudre ? Qu'est-ce qui vous freine aujourd'hui ? Qu'avez-vous déjà essayé ?" required></textarea>
       </div>
       <button type="submit" class="form-submit">
         Envoyer ma demande
