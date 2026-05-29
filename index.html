@@ -8,6 +8,33 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/style.css"/>
+<style>
+/* ─── BANNIÈRE AUDIT GRATUIT ─── */
+.audit-banner{background:linear-gradient(135deg,rgba(201,169,110,0.12) 0%,rgba(201,169,110,0.06) 100%);border-bottom:1px solid rgba(201,169,110,0.22);padding:16px 60px;position:sticky;top:78px;z-index:499;backdrop-filter:blur(10px);}
+.audit-banner-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.ab-left{display:flex;align-items:center;gap:16px;}
+.ab-badge{background:var(--gold);color:#0B0C11;font-size:9px;font-weight:700;letter-spacing:0.16em;padding:5px 10px;flex-shrink:0;white-space:nowrap;}
+.ab-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:#EDE8DF;margin-bottom:3px;}
+.ab-sub{font-size:12px;color:#7A7880;line-height:1.5;}
+.ab-btn{background:var(--gold);color:#0B0C11;padding:11px 24px;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background 0.2s;}
+.ab-btn:hover{background:#E8C98E;}
+/* ─── CARTE AUDIT GRATUIT ─── */
+.audit-free-card{border:1px solid rgba(201,169,110,0.35)!important;background:linear-gradient(135deg,rgba(201,169,110,0.07) 0%,#13141B 100%)!important;}
+.free-badge{background:var(--gold)!important;color:#0B0C11!important;}
+.free-price{color:var(--gold)!important;}
+.free-price strong{color:var(--gold)!important;}
+.gold-link{color:var(--gold)!important;border-bottom-color:var(--gold)!important;font-weight:600!important;}
+/* ─── GRID 4 COLONNES ─── */
+@media(min-width:1101px){.services-grid{grid-template-columns:repeat(4,1fr)!important;}}
+@media(max-width:1100px){.services-grid{grid-template-columns:repeat(2,1fr)!important;}}
+@media(max-width:768px){
+  .audit-banner{padding:14px 24px;}
+  .audit-banner-inner{flex-direction:column;align-items:flex-start;gap:12px;}
+  .ab-left{flex-direction:column;align-items:flex-start;gap:8px;}
+  .ab-btn{width:100%;text-align:center;display:block;}
+  .services-grid{grid-template-columns:1fr!important;}
+}
+</style>
 </head>
 <body>
 
@@ -25,7 +52,7 @@
       <li><a href="#apropos">À propos</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#contact" class="nav-btn">Démarrer</a>
+    <a href="#audit-gratuit" class="nav-btn">Audit gratuit</a>
   </div>
   <button class="burger" id="burger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -40,7 +67,21 @@
   <a href="#integration" onclick="closeMobile()">Intégration IA</a>
   <a href="#apropos" onclick="closeMobile()">À propos</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
-  <a href="#contact" class="mobile-cta" onclick="closeMobile()">Démarrer →</a>
+  <a href="#audit-gratuit" class="mobile-cta" onclick="closeMobile()">Audit gratuit →</a>
+</div>
+
+<!-- BANNIÈRE AUDIT GRATUIT -->
+<div class="audit-banner" id="audit-gratuit">
+  <div class="audit-banner-inner">
+    <div class="ab-left">
+      <span class="ab-badge">GRATUIT</span>
+      <div>
+        <p class="ab-title">Audit de vos tâches répétitives — offert</p>
+        <p class="ab-sub">En 30 minutes, on identifie ce que l'IA peut automatiser dans votre business et combien de temps vous y gagnez chaque semaine.</p>
+      </div>
+    </div>
+    <a href="#contact" class="ab-btn">Réserver mon audit →</a>
+  </div>
 </div>
 
 <!-- HERO -->
@@ -66,7 +107,7 @@
     </div>
 
     <p class="hero-desc">
-      Nous concevons des sites web avec IA intégrée, des automatisations intelligentes et des audits technologiques pour les PME et startups qui veulent avancer sans se perdre dans la technique.
+      Nous concevons des sites web avec IA intégrée, des automatisations intelligentes et des intégrations IA pour les PME et startups qui veulent avancer sans se perdre dans la technique.
     </p>
 
     <div class="hero-actions">
@@ -160,6 +201,25 @@
       </ul>
       <div class="service-price">À partir de <strong>500€</strong></div>
       <a href="#contact" class="service-link">Demander une intégration →</a>
+    </div>
+
+    <!-- AUDIT GRATUIT CARD -->
+    <div class="service-card audit-free-card">
+      <div class="service-badge free-badge">100% GRATUIT</div>
+      <div class="service-orn">04</div>
+      <div class="service-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v3M11 14h.01"/></svg>
+      </div>
+      <h3>Audit <em>Automatisation IA</em></h3>
+      <p>Vous perdez des heures chaque semaine sur des tâches répétitives sans le savoir. En 30 minutes, on analyse vos processus et on vous dit exactement ce que l'IA peut automatiser — et combien de temps vous y gagnez.</p>
+      <ul class="service-list">
+        <li>Analyse de vos tâches chronophages</li>
+        <li>Identification des opportunités IA</li>
+        <li>Estimation du temps récupéré par semaine</li>
+        <li>Recommandations concrètes et chiffrées</li>
+      </ul>
+      <div class="service-price free-price">Offert · <strong>Sans engagement</strong></div>
+      <a href="#contact" class="service-link gold-link">Réserver mon audit gratuit →</a>
     </div>
 
   </div>
@@ -482,7 +542,6 @@
   </div>
 </section>
 
-
 <!-- À PROPOS -->
 <section class="apropos" id="apropos">
   <div class="apropos-inner">
@@ -669,6 +728,7 @@
           <label>Service souhaité</label>
           <select name="service" required>
             <option value="" disabled selected>Choisir</option>
+            <option>Audit gratuit — identifier mes automatisations IA</option>
             <option>Site Web + Chatbot IA</option>
             <option>Automatisation IA</option>
             <option>Intégration IA sur site existant</option>
@@ -681,6 +741,7 @@
         <label>Budget approximatif</label>
         <select name="budget" required>
           <option value="" disabled selected>Choisir</option>
+          <option>Audit gratuit — sans budget</option>
           <option>350€ – 800€</option>
           <option>800€ – 1 500€</option>
           <option>1 500€ – 3 000€</option>
@@ -689,7 +750,7 @@
       </div>
       <div class="form-group">
         <label>Décrivez votre situation</label>
-        <textarea name="message" rows="5" placeholder="Quel problème voulez-vous résoudre ? Qu'est-ce qui vous freine aujourd'hui ? Qu'avez-vous déjà essayé ?" required></textarea>
+        <textarea name="message" rows="5" placeholder="Quel problème voulez-vous résoudre ? Quelles tâches vous prennent le plus de temps chaque semaine ?" required></textarea>
       </div>
       <button type="submit" class="form-submit">
         Envoyer ma demande
