@@ -3,645 +3,172 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Automex-AI — Web · Automatisation · Intégration IA</title>
-<meta name="description" content="Nous construisons des systèmes web intelligents pour les PME et startups ambitieuses. Sites IA, automatisations et audits technologiques — livrés avec précision."/>
+<title>Automex-AI — Sites web, chatbots et automatisations IA pour PME</title>
+<meta name="description" content="Automex-AI construit des sites web intelligents, des chatbots IA 24/7 et des automatisations qui font tourner votre business pendant que vous dormez. Audit gratuit."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/style.css"/>
-<style>
-/* ─── BANNIÈRE AUDIT GRATUIT ─── */
-.audit-banner{background:linear-gradient(135deg,rgba(201,169,110,0.12) 0%,rgba(201,169,110,0.06) 100%);border-bottom:1px solid rgba(201,169,110,0.22);padding:16px 60px;position:sticky;top:78px;z-index:499;backdrop-filter:blur(10px);}
-.audit-banner-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;}
-.ab-left{display:flex;align-items:center;gap:16px;}
-.ab-badge{background:var(--gold);color:#0B0C11;font-size:9px;font-weight:700;letter-spacing:0.16em;padding:5px 10px;flex-shrink:0;white-space:nowrap;}
-.ab-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:#EDE8DF;margin-bottom:3px;}
-.ab-sub{font-size:12px;color:#7A7880;line-height:1.5;}
-.ab-btn{background:var(--gold);color:#0B0C11;padding:11px 24px;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background 0.2s;}
-.ab-btn:hover{background:#E8C98E;}
-/* ─── CARTE AUDIT GRATUIT ─── */
-.audit-free-card{border:1px solid rgba(201,169,110,0.35)!important;background:linear-gradient(135deg,rgba(201,169,110,0.07) 0%,#13141B 100%)!important;}
-.free-badge{background:var(--gold)!important;color:#0B0C11!important;}
-.free-price{color:var(--gold)!important;}
-.free-price strong{color:var(--gold)!important;}
-.gold-link{color:var(--gold)!important;border-bottom-color:var(--gold)!important;font-weight:600!important;}
-/* ─── GRID 4 COLONNES ─── */
-@media(min-width:1101px){.services-grid{grid-template-columns:repeat(4,1fr)!important;}}
-@media(max-width:1100px){.services-grid{grid-template-columns:repeat(2,1fr)!important;}}
-@media(max-width:768px){
-  .audit-banner{padding:14px 24px;}
-  .audit-banner-inner{flex-direction:column;align-items:flex-start;gap:12px;}
-  .ab-left{flex-direction:column;align-items:flex-start;gap:8px;}
-  .ab-btn{width:100%;text-align:center;display:block;}
-  .services-grid{grid-template-columns:1fr!important;}
-}
-</style>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav class="navbar" id="nav">
-  <a href="#" class="nav-logo">
-    Automex<span>AI</span>
+  <a href="#home" class="nav-logo">
+    <span class="nav-logo-text">Automex<span>·AI</span></span>
+    <img src="logo-white.svg" alt="Automex-AI" height="36" style="display:none" onload="this.style.display='inline-block';this.previousElementSibling.style.display='none';" onerror="this.remove();"/>
   </a>
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
-      <li><a href="#projets">Projets</a></li>
-      <li><a href="#automations">Automatisations</a></li>
-      <li><a href="#integration">Intégration IA</a></li>
+      <li><a href="#secteurs">Solutions</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
       <li><a href="#apropos">À propos</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#audit-gratuit" class="nav-btn">Audit gratuit</a>
+    <a href="#contact" class="nav-btn">Réserver un audit</a>
   </div>
-  <button class="burger" id="burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="#services" onclick="closeMobile()">Services</a>
-  <a href="#projets" onclick="closeMobile()">Projets</a>
-  <a href="#automations" onclick="closeMobile()">Automatisations</a>
-  <a href="#integration" onclick="closeMobile()">Intégration IA</a>
+  <a href="#secteurs" onclick="closeMobile()">Solutions</a>
+  <a href="#realisations" onclick="closeMobile()">Réalisations</a>
   <a href="#apropos" onclick="closeMobile()">À propos</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
-  <a href="#audit-gratuit" class="mobile-cta" onclick="closeMobile()">Audit gratuit →</a>
+  <a href="#contact" class="mobile-cta" onclick="closeMobile()">Réserver un audit →</a>
 </div>
 
-<!-- BANNIÈRE AUDIT GRATUIT -->
-<div class="audit-banner" id="audit-gratuit">
-  <div class="audit-banner-inner">
-    <div class="ab-left">
-      <span class="ab-badge">GRATUIT</span>
-      <div>
-        <p class="ab-title">Audit de vos tâches répétitives — offert</p>
-        <p class="ab-sub">En 30 minutes, on identifie ce que l'IA peut automatiser dans votre business et combien de temps vous y gagnez chaque semaine.</p>
-      </div>
-    </div>
-    <a href="#contact" class="ab-btn">Réserver mon audit →</a>
-  </div>
-</div>
-
-<!-- HERO -->
+<!-- 1. HERO -->
 <section class="hero" id="home">
-  <div class="hero-ornament" aria-hidden="true">◆</div>
-
   <div class="hero-inner">
-    <div class="hero-tag">
-      <span class="tag-pulse"></span>
-      Disponible · Basé à Cotonou · Clients francophones & internationaux
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        Disponible pour nouveaux projets · Cotonou &amp; clients internationaux
+      </div>
+      <h1 class="hero-title">L'IA qui travaille<br>pendant que <span class="text-blue">vous dormez.</span></h1>
+      <p class="hero-desc">Sites web intelligents, chatbots IA et automatisations qui captent vos prospects, répondent à vos clients et font tourner votre business — même à 3h du matin.</p>
+      <div class="hero-actions">
+        <a href="#realisations" class="btn btn-outline">Voir une démo</a>
+        <a href="#contact" class="btn btn-primary">Audit gratuit</a>
+      </div>
     </div>
 
-    <h1 class="hero-title">
-      Votre business<br>
-      mérite un site qui<br>
-      <em>travaille pour vous.</em>
-    </h1>
-
-    <div class="hero-divider">
-      <span class="div-line"></span>
-      <span class="div-mark">◆</span>
-      <span class="div-line"></span>
-    </div>
-
-    <p class="hero-desc">
-      Nous concevons des sites web avec IA intégrée, des automatisations intelligentes et des intégrations IA pour les PME et startups qui veulent avancer sans se perdre dans la technique.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#projets" class="btn-primary">Découvrir nos réalisations</a>
-      <a href="#contact" class="btn-outline">Démarrer un projet →</a>
-    </div>
-  </div>
-
-  <div class="hero-stats">
-    <div class="hstat">
-      <span class="hstat-n" data-target="4">0</span>
-      <span class="hstat-l">Projets livrés</span>
-    </div>
-    <div class="hstat-sep">◆</div>
-    <div class="hstat">
-      <span class="hstat-n" data-target="2">0</span>
-      <span class="hstat-l">Semaines · délai garanti</span>
-    </div>
-    <div class="hstat-sep">◆</div>
-    <div class="hstat">
-      <span class="hstat-n">3</span>
-      <span class="hstat-l">Expertises complémentaires</span>
-    </div>
-    <div class="hstat-sep">◆</div>
-    <div class="hstat">
-      <span class="hstat-n" data-target="24">0</span>
-      <span class="hstat-l">h/24 votre IA travaille</span>
+    <div class="chat-mock" id="chat-mock">
+      <div class="chat-head">
+        <div class="chat-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 16h.01M16 16h.01"/></svg>
+        </div>
+        <div class="chat-head-info">
+          <p>Assistant IA · Le Bistrot Lumière</p>
+          <span class="chat-head-status">En ligne</span>
+        </div>
+        <span class="chat-time">03:47</span>
+      </div>
+      <div class="chat-body" id="chat-body"></div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- 2. PROBLÈME -->
+<section class="problem" id="probleme">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow" style="justify-content:center">Le constat</p>
+      <h2 class="section-title">Les entreprises perdent<br>des clients chaque jour</h2>
+      <p class="section-sub">Pendant que vous dormez, travaillez ou gérez l'opérationnel, des prospects essaient de vous contacter — et abandonnent avant que vous ne le sachiez.</p>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 20a2 2 0 0 1-2 2h-3.28a2 2 0 0 1-1.94-1.51l-1.13-4.53a2 2 0 0 1 .54-1.9l1.68-1.68a12 12 0 0 1-6.28-6.28L9 7.68a2 2 0 0 1-1.9.54L2.57 7.09A2 2 0 0 1 1 5.15V2a2 2 0 0 1 2-2h3"/><line x1="23" y1="1" x2="1" y2="23"/></svg>
+        </div>
+        <h3>Appels manqués, clients perdus</h3>
+        <p>Un client appelle en dehors de vos horaires, tombe sur le silence, et contacte votre concurrent dans la minute qui suit. <span class="problem-stat">70%</span> de ces appels ne sont jamais rappelés.</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Réponse trop lente = prospect parti</h3>
+        <p><span class="problem-stat">68%</span> des acheteurs choisissent l'entreprise qui répond en premier. Un devis envoyé 3 jours plus tard, c'est déjà un client perdu.</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+        </div>
+        <h3>Des heures perdues sur des tâches répétitives</h3>
+        <p>Rappels, relances, saisie de données, réponses aux mêmes questions… du temps que vous ne consacrez plus à développer votre activité.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. SOLUTIONS -->
 <section class="services" id="services">
-  <div class="section-header">
-    <p class="section-eyebrow">
-      <span class="orn">◆</span> Ce que nous faisons
-    </p>
-    <h2 class="section-title">Trois expertises.<br><em>Un seul partenaire.</em></h2>
-    <p class="section-sub">Vous n'avez pas besoin de trois prestataires différents. Nous couvrons l'ensemble de votre stack technologique — de la conception à l'optimisation.</p>
-  </div>
-
-  <div class="services-grid">
-
-    <div class="service-card">
-      <div class="service-orn">01</div>
-      <div class="service-icon">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-      </div>
-      <h3>Sites Web <em>+ IA Intégrée</em></h3>
-      <p>Votre site ne se contente plus d'exister. Il répond à vos clients à 23h, qualifie vos prospects, prend vos réservations — sans que vous leviez le petit doigt.</p>
-      <ul class="service-list">
-        <li>Chatbot IA personnalisé selon votre activité</li>
-        <li>Design responsive sur mesure</li>
-        <li>Déploiement et formation inclus</li>
-        <li>Résultats mesurables en 30 jours</li>
-      </ul>
-      <div class="service-price">À partir de <strong>1 200€</strong></div>
-      <a href="#contact" class="service-link">Démarrer ce projet →</a>
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow" style="justify-content:center">Ce que nous construisons</p>
+      <h2 class="section-title">Quatre leviers pour<br><span class="text-blue">un business qui tourne seul.</span></h2>
+      <p class="section-sub">Chaque solution est conçue pour un objectif précis : plus de leads captés, moins de temps perdu, plus de conversions.</p>
     </div>
 
-    <div class="service-card featured">
-      <div class="service-badge">Le plus demandé</div>
-      <div class="service-orn">02</div>
-      <div class="service-icon">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+    <div class="solutions-grid">
+      <div class="solution-card reveal">
+        <div class="solution-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Sites web intelligents</h3>
+        <p>Un site qui ne se contente pas d'exister — il convertit, qualifie et répond à vos visiteurs, conçu pour transformer le trafic en clients.</p>
+        <a href="#contact" class="solution-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
-      <h3>Automatisation <em>IA</em></h3>
-      <p>Vos tâches répétitives — emails, rapports, qualification de leads, réponses clients — automatisées par l'IA. Vous récupérez des heures chaque semaine pour vous concentrer sur ce qui compte.</p>
-      <ul class="service-list">
-        <li>Audit de vos processus chronophages</li>
-        <li>Automatisation sur mesure avec l'IA</li>
-        <li>Tableaux de bord et rapports PDF auto</li>
-        <li>Maintenance et optimisation mensuelle</li>
-      </ul>
-      <div class="service-price">À partir de <strong>800€</strong> + <strong>40€/mois</strong></div>
-      <a href="#contact" class="service-link">Démarrer ce projet →</a>
-    </div>
-
-    <div class="service-card">
-      <div class="service-orn">03</div>
-      <div class="service-icon">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      <div class="solution-card reveal">
+        <div class="solution-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+        <h3>Chatbots IA 24/7</h3>
+        <p>Un assistant IA formé sur votre activité qui répond instantanément à vos clients, jour et nuit, week-end compris.</p>
+        <a href="#contact" class="solution-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
-      <h3>Intégration IA <em>sur site existant</em></h3>
-      <p>Votre site actuel garde son design. On y greffe une IA qui travaille pour vous — chatbot, formulaire intelligent, assistant WhatsApp — sans tout reconstruire.</p>
-      <ul class="service-list">
-        <li>Analyse de votre site et de vos besoins</li>
-        <li>Chatbot ou assistant IA sur mesure</li>
-        <li>Formulaire qualifiant intelligent</li>
-        <li>Formation et autonomie complète</li>
-      </ul>
-      <div class="service-price">À partir de <strong>500€</strong></div>
-      <a href="#contact" class="service-link">Demander une intégration →</a>
-    </div>
-
-    <!-- AUDIT GRATUIT CARD -->
-    <div class="service-card audit-free-card">
-      <div class="service-badge free-badge">100% GRATUIT</div>
-      <div class="service-orn">04</div>
-      <div class="service-icon">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v3M11 14h.01"/></svg>
+      <div class="solution-card reveal">
+        <div class="solution-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+        <h3>Automatisations</h3>
+        <p>Des workflows n8n qui éliminent les tâches répétitives : relances, rapports, qualification de leads, mise à jour de vos outils.</p>
+        <a href="#contact" class="solution-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
-      <h3>Audit <em>Automatisation IA</em></h3>
-      <p>Vous perdez des heures chaque semaine sur des tâches répétitives sans le savoir. En 30 minutes, on analyse vos processus et on vous dit exactement ce que l'IA peut automatiser — et combien de temps vous y gagnez.</p>
-      <ul class="service-list">
-        <li>Analyse de vos tâches chronophages</li>
-        <li>Identification des opportunités IA</li>
-        <li>Estimation du temps récupéré par semaine</li>
-        <li>Recommandations concrètes et chiffrées</li>
-      </ul>
-      <div class="service-price free-price">Offert · <strong>Sans engagement</strong></div>
-      <a href="#contact" class="service-link gold-link">Réserver mon audit gratuit →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROJETS -->
-<section class="projets" id="projets">
-  <div class="section-header">
-    <p class="section-eyebrow">
-      <span class="orn">◆</span> Réalisations
-    </p>
-    <h2 class="section-title">Des systèmes<br><em>qui travaillent.</em></h2>
-  </div>
-
-  <div class="projets-list">
-
-    <!-- Projet 01 — Bistrot Lumière -->
-    <div class="projet-item">
-      <div class="projet-num">01</div>
-      <a href="https://bistrot-lumiere.vercel.app/" target="_blank" rel="noopener" class="projet-img img-bistrot">
-        <div class="projet-hover"><span>Visiter le site ↗</span></div>
-      </a>
-      <div class="projet-info">
-        <div class="projet-meta">
-          <span class="meta-type">Site Web + Chatbot IA</span>
-          <span class="meta-dot">◆</span>
-          <span class="meta-sector">Restaurant Gastronomique</span>
-        </div>
-        <h3 class="projet-title">Le Bistrot <em>Lumière</em></h3>
-        <p class="projet-desc">Ce restaurant parisien perdait des réservations chaque soir après 22h — le téléphone sonnait dans le vide. Aujourd'hui, leur assistante IA répond aux questions sur la carte, les horaires et les réservations 24h/24, avec l'élégance de la maison.</p>
-        <div class="projet-result">
-          <span class="res-orn">◆</span>
-          <div>
-            <p class="res-label">Impact mesuré</p>
-            <p class="res-val">−80% d'appels non décrochés · Réservations prises automatiquement la nuit</p>
-          </div>
-        </div>
-        <div class="projet-stack">
-          <span>HTML/CSS</span><span>JavaScript</span><span>Claude API</span><span>Vercel</span>
-        </div>
-        <a href="https://bistrot-lumiere.vercel.app/" target="_blank" rel="noopener" class="projet-visit-btn">Visiter le site ↗</a>
+      <div class="solution-card reveal">
+        <div class="solution-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+        <h3>Agents IA</h3>
+        <p>Des agents autonomes qui gèrent des processus complexes de bout en bout — de la prise de contact à la conversion, sans intervention humaine.</p>
+        <a href="#contact" class="solution-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
 
-    <!-- Projet 02 — Nexus Analytics -->
-    <div class="projet-item reverse">
-      <div class="projet-num">02</div>
-      <a href="https://dashboard-ia-woad.vercel.app/" target="_blank" rel="noopener" class="projet-img img-dashboard">
-        <div class="projet-hover"><span>Visiter le site ↗</span></div>
-      </a>
-      <div class="projet-info">
-        <div class="projet-meta">
-          <span class="meta-type">Dashboard IA + Rapport PDF</span>
-          <span class="meta-dot">◆</span>
-          <span class="meta-sector">E-commerce</span>
-        </div>
-        <h3 class="projet-title">Nexus <em>Analytics</em></h3>
-        <p class="projet-desc">Le gérant passait 3 heures chaque lundi à compiler ses chiffres dans Excel. Désormais, son dashboard lui dit en temps réel ce qui fonctionne, ce qui baisse — avec une analyse IA en français et un rapport PDF généré en un seul clic.</p>
-        <div class="projet-result">
-          <span class="res-orn">◆</span>
-          <div>
-            <p class="res-label">Impact mesuré</p>
-            <p class="res-val">3h de travail manuel → 1 clic · Décisions basées sur des données réelles</p>
+    <div class="auto-showcase">
+      <h3 class="auto-showcase-title">Automatisations en action</h3>
+      <div class="auto-grid">
+        <div class="auto-card reveal">
+          <div class="auto-img img-auto1"></div>
+          <div class="auto-info">
+            <div class="auto-tags"><span>n8n</span><span>RAG</span><span>Google Sheets</span><span>Gmail</span><span>Calendar</span></div>
+            <h4>Agent IA Immobilier</h4>
+            <p>Répond aux prospects via chat (RAG sur les biens disponibles), ajoute les leads dans Google Sheets, planifie les visites et envoie les confirmations — entièrement automatisé.</p>
           </div>
         </div>
-        <div class="projet-stack">
-          <span>Chart.js</span><span>jsPDF</span><span>Claude API</span><span>Vercel</span>
-        </div>
-        <a href="https://dashboard-ia-woad.vercel.app/" target="_blank" rel="noopener" class="projet-visit-btn">Visiter le site ↗</a>
-      </div>
-    </div>
-
-    <!-- Projet 03 — Clara Fontaine -->
-    <div class="projet-item">
-      <div class="projet-num">03</div>
-      <a href="https://landing-coach-kappa.vercel.app/" target="_blank" rel="noopener" class="projet-img img-coach">
-        <div class="projet-hover"><span>Visiter le site ↗</span></div>
-      </a>
-      <div class="projet-info">
-        <div class="projet-meta">
-          <span class="meta-type">Landing Page + Diagnostic IA</span>
-          <span class="meta-dot">◆</span>
-          <span class="meta-sector">Coaching & Consulting</span>
-        </div>
-        <h3 class="projet-title">Clara Fontaine <em>Coaching</em></h3>
-        <p class="projet-desc">Son site avait du trafic, zéro conversion. Nous avons intégré un générateur de diagnostic IA : le visiteur décrit son problème de leadership, l'IA génère un plan d'action personnalisé en 5 secondes. Le prospect reçoit de la valeur avant même de payer.</p>
-        <div class="projet-result">
-          <span class="res-orn">◆</span>
-          <div>
-            <p class="res-label">Impact mesuré</p>
-            <p class="res-val">+340% de demandes de session découverte · Leads qualifiés automatiquement</p>
+        <div class="auto-card reveal">
+          <div class="auto-img img-auto2"></div>
+          <div class="auto-info">
+            <div class="auto-tags"><span>n8n</span><span>Telegram</span><span>Groq</span><span>Mémoire IA</span></div>
+            <h4>Support Client Telegram</h4>
+            <p>Bot Telegram avec agent IA et mémoire de conversation, pour le SAV, le support technique ou l'onboarding — disponible 24h/24.</p>
           </div>
         </div>
-        <div class="projet-stack">
-          <span>HTML/CSS</span><span>JavaScript</span><span>Claude API</span><span>Vercel</span>
-        </div>
-        <a href="https://landing-coach-kappa.vercel.app/" target="_blank" rel="noopener" class="projet-visit-btn">Visiter le site ↗</a>
-      </div>
-    </div>
-
-    <!-- Projet 04 — ImmoPremium -->
-    <div class="projet-item reverse">
-      <div class="projet-num">04</div>
-      <a href="https://immo-premium.vercel.app/" target="_blank" rel="noopener" class="projet-img img-immo">
-        <div class="projet-hover"><span>Visiter le site ↗</span></div>
-      </a>
-      <div class="projet-info">
-        <div class="projet-meta">
-          <span class="meta-type">Site Immobilier + Chatbot IA</span>
-          <span class="meta-dot">◆</span>
-          <span class="meta-sector">Immobilier</span>
-        </div>
-        <h3 class="projet-title">Immo<em>Premium</em></h3>
-        <p class="projet-desc">Plateforme immobilière complète pour une agence au Bénin. Catalogue de propriétés avec filtres, fiches détaillées et chatbot IA intégré qui guide les acheteurs selon leur budget et leurs critères — disponible 24h/24 pour qualifier les leads.</p>
-        <div class="projet-result">
-          <span class="res-orn">◆</span>
-          <div>
-            <p class="res-label">Impact mesuré</p>
-            <p class="res-val">Qualification automatique des acheteurs · Leads filtrés par budget avant le 1er appel</p>
-          </div>
-        </div>
-        <div class="projet-stack">
-          <span>HTML/CSS</span><span>JavaScript</span><span>Claude API</span><span>Vercel</span>
-        </div>
-        <a href="https://immo-premium.vercel.app/" target="_blank" rel="noopener" class="projet-visit-btn">Visiter le site ↗</a>
-      </div>
-    </div>
-
-    <!-- Projet 05 — Automex-AI Studio -->
-    <div class="projet-item">
-      <div class="projet-num">05</div>
-      <div class="projet-img img-agence">
-        <div class="projet-hover-disabled"></div>
-      </div>
-      <div class="projet-info">
-        <div class="projet-meta">
-          <span class="meta-type">Landing Page + Générateur Copy IA</span>
-          <span class="meta-dot">◆</span>
-          <span class="meta-sector">Agence IA</span>
-        </div>
-        <h3 class="projet-title">Automex-AI <em>Studio</em></h3>
-        <p class="projet-desc">Notre propre vitrine. Nous avons appliqué à nous-mêmes ce que nous proposons à nos clients : un générateur de copywriting IA où le prospect tape son activité et obtient instantanément l'accroche parfaite pour son business. Notre meilleur outil commercial.</p>
-        <div class="projet-result">
-          <span class="res-orn">◆</span>
-          <div>
-            <p class="res-label">Usage</p>
-            <p class="res-val">Chaque prospect voit en direct la valeur de l'IA pour son activité · Taux de contact ×3</p>
-          </div>
-        </div>
-        <div class="projet-stack">
-          <span>HTML/CSS</span><span>JavaScript</span><span>Claude API</span><span>Vercel</span>
-        </div>
-        <span class="projet-current-badge">◆ Vous êtes ici</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- AUTOMATISATIONS -->
-<section class="automations" id="automations">
-  <div class="section-header">
-    <p class="section-eyebrow">
-      <span class="orn">◆</span> Automatisations IA
-    </p>
-    <h2 class="section-title">Des workflows qui<br><em>tournent seuls.</em></h2>
-    <p class="section-sub">Ces automatisations n8n remplacent des heures de travail manuel chaque semaine. Chaque flux est conçu sur mesure selon les outils et processus du client.</p>
-  </div>
-
-  <div class="auto-grid">
-
-    <div class="auto-card">
-      <div class="auto-img img-auto1"></div>
-      <div class="auto-info">
-        <div class="auto-tags">
-          <span>n8n</span><span>RAG</span><span>Google Sheets</span><span>Gmail</span><span>Calendar</span>
-        </div>
-        <h3 class="auto-title">Agent IA <em>Immobilier</em></h3>
-        <p class="auto-desc">Un agent IA complet pour une agence immobilière. Il répond aux questions des prospects via chat (RAG sur les biens disponibles), ajoute les leads dans Google Sheets, planifie des visites dans Google Calendar et envoie des confirmations par Gmail — entièrement automatisé.</p>
-        <div class="auto-result">
-          <span class="res-orn">◆</span>
-          <div>
-            <p class="res-label">Ce que ça remplace</p>
-            <p class="res-val">Réception des demandes · Qualification · Prise de RDV · Emails de suivi</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="auto-card">
-      <div class="auto-img img-auto2"></div>
-      <div class="auto-info">
-        <div class="auto-tags">
-          <span>n8n</span><span>Telegram</span><span>Groq</span><span>Mémoire IA</span>
-        </div>
-        <h3 class="auto-title">Support Client <em>Telegram</em></h3>
-        <p class="auto-desc">Bot Telegram avec Agent IA et mémoire de conversation. Le client envoie un message, l'IA répond avec le contexte des échanges précédents. Idéal pour le SAV, le support technique ou l'onboarding de nouveaux clients — disponible 24h/24.</p>
-        <div class="auto-result">
-          <span class="res-orn">◆</span>
-          <div>
-            <p class="res-label">Ce que ça remplace</p>
-            <p class="res-val">Réponses manuelles aux clients · Support de premier niveau · FAQ</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="auto-card">
-      <div class="auto-img img-auto3"></div>
-      <div class="auto-info">
-        <div class="auto-tags">
-          <span>n8n</span><span>Google Sheets</span><span>LLM</span><span>Gmail</span>
-        </div>
-        <h3 class="auto-title">Prospection Email <em>IA</em></h3>
-        <p class="auto-desc">Flux de prospection automatisé : lit une liste de prospects dans Google Sheets, génère un email personnalisé par LLM pour chaque contact, vérifie si déjà contacté, envoie via Gmail et met à jour le statut dans le tableau. Zéro copier-coller.</p>
-        <div class="auto-result">
-          <span class="res-orn">◆</span>
-          <div>
-            <p class="res-label">Ce que ça remplace</p>
-            <p class="res-val">Rédaction manuelle · Envoi un par un · Suivi dans Excel</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="auto-cta">
-    <p>Vous avez des tâches répétitives à automatiser ?</p>
-    <a href="#contact" class="btn-primary">Discutons de votre cas →</a>
-  </div>
-
-</section>
-
-<!-- INTÉGRATION IA -->
-<section class="integration-section" id="integration">
-  <div class="section-header">
-    <p class="section-eyebrow">
-      <span class="orn">◆</span> Intégration IA sur site existant
-    </p>
-    <h2 class="section-title">Votre site actuel.<br><em>Notre IA dedans.</em></h2>
-    <p class="section-sub">Pas besoin de tout reconstruire. On greffe une intelligence artificielle sur votre site existant — en 1 semaine, sans toucher à votre design.</p>
-  </div>
-
-  <div class="integration-body">
-
-    <div class="integration-how">
-      <h3 class="ih-title">Comment ça se passe</h3>
-      <div class="ih-steps">
-        <div class="ih-step">
-          <span class="ih-num">01</span>
-          <div>
-            <p class="ih-name">Analyse de votre site</p>
-            <p class="ih-desc">On examine votre site actuel, votre activité et vos besoins. On identifie exactement où l'IA peut vous faire gagner du temps ou des clients.</p>
-          </div>
-        </div>
-        <div class="ih-step">
-          <span class="ih-num">02</span>
-          <div>
-            <p class="ih-name">Intégration sur mesure</p>
-            <p class="ih-desc">On développe et intègre le composant IA directement dans votre site existant — chatbot, formulaire intelligent, réponses automatiques.</p>
-          </div>
-        </div>
-        <div class="ih-step">
-          <span class="ih-num">03</span>
-          <div>
-            <p class="ih-name">Test & Formation</p>
-            <p class="ih-desc">On teste tout ensemble, on vous forme à utiliser et personnaliser votre IA. Vous êtes autonome dès le premier jour.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="integration-what">
-      <h3 class="iw-title">Ce qu'on peut intégrer</h3>
-      <div class="iw-grid">
-        <div class="iw-item">
-          <span class="iw-orn">◆</span>
-          <div>
-            <p class="iw-name">Chatbot IA personnalisé</p>
-            <p class="iw-desc">Répond à vos clients 24h/24 selon votre activité — horaires, FAQ, réservations, devis.</p>
-          </div>
-        </div>
-        <div class="iw-item">
-          <span class="iw-orn">◆</span>
-          <div>
-            <p class="iw-name">Formulaire qualifiant</p>
-            <p class="iw-desc">L'IA analyse les demandes entrantes et vous envoie uniquement les prospects sérieux.</p>
-          </div>
-        </div>
-        <div class="iw-item">
-          <span class="iw-orn">◆</span>
-          <div>
-            <p class="iw-name">Générateur de contenu</p>
-            <p class="iw-desc">Descriptions produits, réponses aux avis, posts réseaux sociaux — générés automatiquement.</p>
-          </div>
-        </div>
-        <div class="iw-item">
-          <span class="iw-orn">◆</span>
-          <div>
-            <p class="iw-name">Assistant WhatsApp / Telegram</p>
-            <p class="iw-desc">Un bot IA connecté à votre numéro professionnel qui gère les demandes clients en temps réel.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="iw-price">
-        <div class="iw-price-item">
-          <span class="iw-market">Afrique francophone</span>
-          <span class="iw-amount">100 000 – 200 000 FCFA</span>
-        </div>
-        <div class="iw-price-item">
-          <span class="iw-market">🇪🇺 Europe francophone</span>
-          <span class="iw-amount">500 – 900€</span>
-        </div>
-        <a href="#contact" class="btn-primary" style="margin-top:24px;display:inline-block">Demander une intégration →</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- À PROPOS -->
-<section class="apropos" id="apropos">
-  <div class="apropos-inner">
-    <div class="apropos-left">
-      <p class="section-eyebrow">
-        <span class="orn">◆</span> Pourquoi nous
-      </p>
-      <h2 class="section-title">Informaticien de<br>formation.<br><em>Bâtisseur par vocation.</em></h2>
-      <p>Diplômé en informatique de gestion, je comprends les systèmes d'information dans leur globalité — pas seulement le code, mais les processus métier, les flux de données et les décisions qui en découlent.</p>
-      <p>Avec l'émergence du vibe coding et de l'IA générative, j'ai élargi ma pratique : construire des solutions web intelligentes, les automatiser, et surtout — les auditer. Car un site construit vite avec l'IA peut cacher des failles que seul un regard formé peut détecter.</p>
-      <p>Automex-AI, c'est cette vision : un partenaire technologique qui construit bien, automatise intelligemment, et valide rigoureusement.</p>
-
-      <div class="apropos-vals">
-        <div class="val-item">
-          <span class="val-orn">◆</span>
-          <div>
-            <p class="val-title">Rigueur technique</p>
-            <p class="val-sub">Chaque ligne livrée est testée, documentée et maintainable.</p>
-          </div>
-        </div>
-        <div class="val-item">
-          <span class="val-orn">◆</span>
-          <div>
-            <p class="val-title">Orienté résultats</p>
-            <p class="val-sub">On mesure l'impact de chaque projet — pas seulement la beauté du design.</p>
-          </div>
-        </div>
-        <div class="val-item">
-          <span class="val-orn">◆</span>
-          <div>
-            <p class="val-title">Disponibilité réelle</p>
-            <p class="val-sub">Réponse sous 24h. Toujours. Ce n'est pas une promesse marketing.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="apropos-right">
-      <div class="skills-panel">
-        <p class="skills-title">Stack technologique</p>
-        <div class="skills-group">
-          <p class="sg-label">Développement Web</p>
-          <div class="sg-tags">
-            <span>HTML/CSS avancé</span>
-            <span>JavaScript</span>
-            <span>Node.js</span>
-            <span>Git/GitHub</span>
-            <span>Vercel</span>
-          </div>
-        </div>
-        <div class="skills-group">
-          <p class="sg-label">Intelligence Artificielle</p>
-          <div class="sg-tags">
-            <span>Claude API</span>
-            <span>Prompt Engineering</span>
-            <span>Chatbots IA</span>
-            <span>Automatisation LLM</span>
-          </div>
-        </div>
-        <div class="skills-group">
-          <p class="sg-label">Audit & Analyse</p>
-          <div class="sg-tags">
-            <span>Audit performance</span>
-            <span>Sécurité web</span>
-            <span>Architecture SI</span>
-            <span>Rapport d'audit</span>
-          </div>
-        </div>
-        <div class="skills-group">
-          <p class="sg-label">Outils & Librairies</p>
-          <div class="sg-tags">
-            <span>Chart.js</span>
-            <span>jsPDF</span>
-            <span>Figma</span>
-            <span>Vibe Coding</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="certif-panel">
-        <p class="certif-title">Formation & Expertise</p>
-        <div class="certif-item">
-          <span class="ci-orn">◆</span>
-          <div>
-            <p class="ci-name">Informatique de Gestion</p>
-            <p class="ci-detail">Études supérieures · Systèmes d'information & gestion</p>
-          </div>
-        </div>
-        <div class="certif-item">
-          <span class="ci-orn">◆</span>
-          <div>
-            <p class="ci-name">Spécialisation IA Générative</p>
-            <p class="ci-detail">Claude API · Prompt Engineering · Automatisation LLM</p>
-          </div>
-        </div>
-        <div class="certif-item">
-          <span class="ci-orn">◆</span>
-          <div>
-            <p class="ci-name">Vibe Coding & Audit</p>
-            <p class="ci-detail">Développement assisté IA · Audit de solutions générées</p>
+        <div class="auto-card reveal">
+          <div class="auto-img img-auto3"></div>
+          <div class="auto-info">
+            <div class="auto-tags"><span>n8n</span><span>Google Sheets</span><span>LLM</span><span>Gmail</span></div>
+            <h4>Prospection Email IA</h4>
+            <p>Lit une liste de prospects, génère un email personnalisé par LLM pour chaque contact, envoie via Gmail et met à jour le statut — zéro copier-coller.</p>
           </div>
         </div>
       </div>
@@ -649,59 +176,298 @@
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- 4. SECTEURS -->
+<section class="secteurs" id="secteurs">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow" style="justify-content:center">Cas d'usage</p>
+      <h2 class="section-title">Une solution adaptée<br>à <span class="text-blue">votre secteur.</span></h2>
+    </div>
+
+    <div class="secteurs-grid">
+      <div class="secteur-card reveal">
+        <div class="secteur-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg></div>
+        <h3>Immobilier</h3>
+        <p>Chatbot qui qualifie les acheteurs par budget et critères avant le premier appel, planifie les visites automatiquement.</p>
+      </div>
+      <div class="secteur-card reveal">
+        <div class="secteur-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V2M7 2v20M17 2v20M17 8h4"/></svg></div>
+        <h3>Restaurant</h3>
+        <p>Assistant IA qui prend les réservations 24h/24, répond aux questions sur le menu, même après la fermeture.</p>
+      </div>
+      <div class="secteur-card reveal">
+        <div class="secteur-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+        <h3>E-commerce</h3>
+        <p>Dashboard IA qui analyse vos ventes en temps réel pendant qu'un chatbot guide vos clients vers l'achat.</p>
+      </div>
+      <div class="secteur-card reveal">
+        <div class="secteur-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></div>
+        <h3>Cabinet médical</h3>
+        <p>Prise de rendez-vous automatisée, rappels de consultation par WhatsApp, réponses aux questions fréquentes.</p>
+      </div>
+      <div class="secteur-card reveal">
+        <div class="secteur-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c0 1.66 3 3 6 3s6-1.34 6-3v-5"/></svg></div>
+        <h3>Formation</h3>
+        <p>Assistant IA qui répond aux futurs élèves, qualifie les inscriptions et automatise le suivi des candidatures.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. RÉALISATIONS -->
+<section class="realisations" id="realisations">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow" style="justify-content:center">Réalisations</p>
+      <h2 class="section-title">Des systèmes<br><span class="text-blue">qui travaillent.</span></h2>
+    </div>
+
+    <div class="realisations-list">
+
+      <div class="real-card reveal">
+        <div class="real-visual">
+          <span class="real-num">01</span>
+          <div class="real-visual-badge">
+            <div class="real-visual-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+            Le Bistrot Lumière
+          </div>
+          <img class="real-thumb" loading="lazy" alt="Aperçu du site Le Bistrot Lumière" onload="this.classList.add('loaded')" onerror="this.remove()" src="img/thumb-bistrot.jpg"/>
+        </div>
+        <div class="real-body">
+          <div class="real-meta"><span>Site web + Chatbot IA</span><span class="dot"></span><span class="sector">Restaurant gastronomique</span></div>
+          <h3>Le Bistrot Lumière</h3>
+          <p>Ce restaurant perdait des réservations chaque soir après 22h — le téléphone sonnait dans le vide. Son assistante IA répond désormais aux questions sur la carte, les horaires et les réservations 24h/24.</p>
+          <div class="real-result">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div><p class="real-result-label">Impact mesuré</p><p class="real-result-val">−80% d'appels non décrochés · Réservations prises automatiquement la nuit</p></div>
+          </div>
+          <div class="real-stack"><span>HTML/CSS</span><span>JavaScript</span><span>Claude API</span><span>Vercel</span></div>
+          <a href="https://bistrot-lumiere.vercel.app/" target="_blank" rel="noopener" class="real-visit">Visiter le site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M17 7H7M17 7v10"/></svg></a>
+        </div>
+      </div>
+
+      <div class="real-card reveal">
+        <div class="real-visual">
+          <span class="real-num">02</span>
+          <div class="real-visual-badge">
+            <div class="real-visual-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M18.7 8l-5.1 5.1-2.8-2.8L7 14.1"/></svg></div>
+            Nexus Analytics
+          </div>
+          <img class="real-thumb" loading="lazy" alt="Aperçu du dashboard Nexus Analytics" onload="this.classList.add('loaded')" onerror="this.remove()" src="img/thumb-dashboard.jpg"/>
+        </div>
+        <div class="real-body">
+          <div class="real-meta"><span>Dashboard IA + Rapport PDF</span><span class="dot"></span><span class="sector">E-commerce</span></div>
+          <h3>Nexus Analytics</h3>
+          <p>Le gérant passait 3 heures chaque lundi à compiler ses chiffres dans Excel. Son dashboard lui dit désormais en temps réel ce qui fonctionne, avec une analyse IA en français et un rapport PDF généré en un clic.</p>
+          <div class="real-result">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div><p class="real-result-label">Impact mesuré</p><p class="real-result-val">3h de travail manuel → 1 clic · Décisions basées sur des données réelles</p></div>
+          </div>
+          <div class="real-stack"><span>Chart.js</span><span>jsPDF</span><span>Claude API</span><span>Vercel</span></div>
+          <a href="https://dashboard-ia-woad.vercel.app/" target="_blank" rel="noopener" class="real-visit">Visiter le site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M17 7H7M17 7v10"/></svg></a>
+        </div>
+      </div>
+
+      <div class="real-card reveal">
+        <div class="real-visual">
+          <span class="real-num">03</span>
+          <div class="real-visual-badge">
+            <div class="real-visual-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg></div>
+            Clara Fontaine Coaching
+          </div>
+          <img class="real-thumb" loading="lazy" alt="Aperçu de la landing page Clara Fontaine Coaching" onload="this.classList.add('loaded')" onerror="this.remove()" src="img/thumb-coach.jpg"/>
+        </div>
+        <div class="real-body">
+          <div class="real-meta"><span>Landing Page + Diagnostic IA</span><span class="dot"></span><span class="sector">Coaching &amp; Consulting</span></div>
+          <h3>Clara Fontaine Coaching</h3>
+          <p>Son site avait du trafic, zéro conversion. Nous avons intégré un générateur de diagnostic IA : le visiteur décrit son problème, l'IA génère un plan d'action personnalisé en 5 secondes.</p>
+          <div class="real-result">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div><p class="real-result-label">Impact mesuré</p><p class="real-result-val">+340% de demandes de session découverte · Leads qualifiés automatiquement</p></div>
+          </div>
+          <div class="real-stack"><span>HTML/CSS</span><span>JavaScript</span><span>Claude API</span><span>Vercel</span></div>
+          <a href="https://landing-coach-kappa.vercel.app/" target="_blank" rel="noopener" class="real-visit">Visiter le site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M17 7H7M17 7v10"/></svg></a>
+        </div>
+      </div>
+
+      <div class="real-card reveal">
+        <div class="real-visual">
+          <span class="real-num">04</span>
+          <div class="real-visual-badge">
+            <div class="real-visual-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg></div>
+            ImmoPremium
+          </div>
+          <img class="real-thumb" loading="lazy" alt="Aperçu du site ImmoPremium" onload="this.classList.add('loaded')" onerror="this.remove()" src="img/thumb-immo.jpg"/>
+        </div>
+        <div class="real-body">
+          <div class="real-meta"><span>Site immobilier + Chatbot IA</span><span class="dot"></span><span class="sector">Immobilier</span></div>
+          <h3>ImmoPremium</h3>
+          <p>Plateforme immobilière complète pour une agence au Bénin. Catalogue de propriétés avec filtres et chatbot IA intégré qui guide les acheteurs selon leur budget — disponible 24h/24 pour qualifier les leads.</p>
+          <div class="real-result">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div><p class="real-result-label">Impact mesuré</p><p class="real-result-val">Qualification automatique des acheteurs · Leads filtrés par budget avant le 1er appel</p></div>
+          </div>
+          <div class="real-stack"><span>HTML/CSS</span><span>JavaScript</span><span>Claude API</span><span>Vercel</span></div>
+          <a href="https://immo-premium.vercel.app/" target="_blank" rel="noopener" class="real-visit">Visiter le site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M17 7H7M17 7v10"/></svg></a>
+        </div>
+      </div>
+
+      <div class="real-card current reveal">
+        <div class="real-visual">
+          <span class="real-num">05</span>
+          <div class="real-visual-badge">
+            <div class="real-visual-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+            Automex-AI Studio
+          </div>
+        </div>
+        <div class="real-body">
+          <div class="real-meta"><span>Landing Page + Générateur Copy IA</span><span class="dot"></span><span class="sector">Agence IA</span></div>
+          <h3>Automex-AI Studio</h3>
+          <p>Notre propre vitrine. Nous appliquons à nous-mêmes ce que nous proposons à nos clients — chaque section de ce site a été pensée pour convertir un visiteur en prospect qualifié.</p>
+          <div class="real-result">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div><p class="real-result-label">Vous êtes ici</p><p class="real-result-val">Ce site est notre meilleur outil commercial — jugez par vous-même</p></div>
+          </div>
+          <div class="real-stack"><span>HTML/CSS</span><span>JavaScript</span><span>Claude API</span><span>Vercel</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 6. MÉTHODE -->
+<section class="methode" id="methode">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow" style="justify-content:center">Notre méthode</p>
+      <h2 class="section-title">Cinq étapes.<br><span class="text-blue">Zéro surprise.</span></h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-step reveal">
+        <div class="timeline-num">01</div>
+        <h3>Audit</h3>
+        <p>On analyse votre activité et vos points de friction pour identifier où l'IA a le plus d'impact.</p>
+      </div>
+      <div class="timeline-step reveal">
+        <div class="timeline-num">02</div>
+        <h3>Prototype</h3>
+        <p>Vous voyez une première version concrète avant tout engagement financier majeur.</p>
+      </div>
+      <div class="timeline-step reveal">
+        <div class="timeline-num">03</div>
+        <h3>Développement</h3>
+        <p>Construction du site, du chatbot ou de l'automatisation, avec points d'étape réguliers.</p>
+      </div>
+      <div class="timeline-step reveal">
+        <div class="timeline-num">04</div>
+        <h3>Déploiement</h3>
+        <p>Mise en ligne, tests, formation — vous êtes autonome dès le premier jour.</p>
+      </div>
+      <div class="timeline-step reveal">
+        <div class="timeline-num">05</div>
+        <h3>Support</h3>
+        <p>Suivi et optimisation continue pour que votre système IA reste performant dans le temps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. POURQUOI AUTOMEX -->
+<section class="benefits" id="apropos">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow" style="justify-content:center">Pourquoi Automex-AI</p>
+      <h2 class="section-title">Un partenaire technique.<br><span class="text-blue">Pas un prestataire de plus.</span></h2>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card reveal">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M18.7 8l-5.1 5.1-2.8-2.8L7 14.1"/></svg></div>
+        <h3>Résultats mesurables</h3>
+        <p>Chaque projet est pensé pour un impact chiffré : plus de leads, moins d'appels manqués, plus de temps récupéré.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg></div>
+        <h3>Livraison rapide</h3>
+        <p>Un site ou une automatisation livrés en 1 à 3 semaines, pas en 3 mois.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg></div>
+        <h3>Un seul interlocuteur</h3>
+        <p>De l'audit au support, vous parlez à la même personne. Pas de perte d'information entre équipes.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3>Expertise technique + IA</h3>
+        <p>Informaticien de formation, spécialisé en IA générative — rigueur technique et innovation combinées.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow" style="justify-content:center">Questions fréquentes</p>
+      <h2 class="section-title">Tout ce que vous<br>devez <span class="text-blue">savoir.</span></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Combien de temps prend un projet ?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">Entre 1 et 3 semaines selon la complexité : un chatbot ou une automatisation simple peut être livré en quelques jours, un site complet avec IA intégrée prend 2 à 3 semaines.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quel est le prix d'un chatbot IA ou d'un site ?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">Cela dépend de vos besoins — l'audit gratuit permet d'établir un devis précis. Comptez généralement entre 500€ et 1 500€ selon la complexité du projet.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Ai-je besoin de compétences techniques ?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">Non. Vous êtes formé à l'utilisation de votre outil et je reste disponible pour toute question après la livraison.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">En quoi consiste l'audit gratuit ?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">Un échange de 30 minutes pour analyser vos process actuels et identifier concrètement ce que l'IA peut automatiser dans votre activité — sans engagement.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Le site sera-t-il adapté mobile ?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">Oui, tous les sites et interfaces sont conçus responsive, testés sur mobile, tablette et desktop.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Proposez-vous un support après la mise en ligne ?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">Oui, chaque projet inclut une période de support, avec possibilité de maintenance mensuelle pour les automatisations.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. CTA FINAL -->
+<section class="cta-final-section">
+  <div class="cta-final reveal">
+    <h2>Prêt à automatiser votre entreprise ?</h2>
+    <p>Réservez un audit gratuit de 30 minutes et découvrez exactement ce que l'IA peut faire pour vous — sans engagement.</p>
+    <a href="#contact" class="btn btn-primary">Réserver mon audit gratuit</a>
+  </div>
+</section>
+
+<!-- 10. CONTACT -->
 <section class="contact" id="contact">
-  <div class="contact-inner">
+  <div class="container contact-inner">
     <div class="contact-left">
-      <p class="section-eyebrow light">
-        <span class="orn">◆</span> Démarrons
-      </p>
-      <h2 class="contact-title">
-        Quel problème<br>
-        résolvons-nous<br>
-        <em>ensemble ?</em>
-      </h2>
-      <p class="contact-sub">Décrivez votre situation en quelques lignes. Nous vous répondons dans les 24 heures avec une proposition concrète — pas un devis générique, une vraie solution à votre vrai problème.</p>
-
-      <div class="contact-details">
-        <div class="cd-item">
-          <span class="cd-orn">◆</span>
-          <div>
-            <p class="cd-label">Localisation</p>
-            <p class="cd-val">Cotonou, Bénin · Clients internationaux</p>
-          </div>
-        </div>
-        <div class="cd-item">
-          <span class="cd-orn">◆</span>
-          <div>
-            <p class="cd-label">Délai de réponse</p>
-            <p class="cd-val">Sous 24 heures · Devis gratuit et sans engagement</p>
-          </div>
-        </div>
-        <div class="cd-item">
-          <span class="cd-orn">◆</span>
-          <div>
-            <p class="cd-label">Marchés</p>
-            <p class="cd-val">France · Belgique · Suisse · Afrique francophone</p>
-          </div>
-        </div>
-      </div>
+      <p class="section-eyebrow">Démarrons</p>
+      <h2 class="contact-title">Quel problème résolvons-nous <span class="text-blue">ensemble ?</span></h2>
+      <p class="contact-sub">Décrivez votre situation en quelques lignes. Nous vous répondons sous 24 heures avec une proposition concrète — pas un devis générique, une vraie solution à votre vrai problème.</p>
 
       <div class="contact-direct">
-        <p class="cd-direct-title">Vous préférez un contact direct ?</p>
-        <a href="https://wa.me/22950131805?text=Bonjour%2C%20j%27ai%20vu%20votre%20portfolio%20Automex-AI%20et%20j%27aimerais%20discuter%20d%27un%20projet." 
-           target="_blank" class="cd-direct-btn whatsapp">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
+        <a href="https://wa.me/22950131805?text=Bonjour%2C%20j%27ai%20vu%20votre%20site%20Automex-AI%20et%20j%27aimerais%20discuter%20d%27un%20projet." target="_blank" class="cd-btn whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
           WhatsApp · +229 50 13 18 05
         </a>
-        <a href="mailto:abdoulrazack607@gmail.com?subject=Demande%20de%20projet%20Automex-AI" 
-           class="cd-direct-btn email">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
+        <a href="mailto:abdoulrazack607@gmail.com?subject=Demande%20de%20projet%20Automex-AI" class="cd-btn email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/><polyline points="22 6 12 13 2 6"/></svg>
           abdoulrazack607@gmail.com
         </a>
       </div>
@@ -722,17 +488,17 @@
       <div class="form-row">
         <div class="form-group">
           <label>Votre activité</label>
-          <input type="text" name="activite" placeholder="Restaurant, startup, cabinet conseil…" required/>
+          <input type="text" name="activite" placeholder="Restaurant, startup, cabinet…" required/>
         </div>
         <div class="form-group">
           <label>Service souhaité</label>
           <select name="service" required>
             <option value="" disabled selected>Choisir</option>
-            <option>Audit gratuit — identifier mes automatisations IA</option>
-            <option>Site Web + Chatbot IA</option>
-            <option>Automatisation IA</option>
-            <option>Intégration IA sur site existant</option>
-            <option>Pack complet — devis personnalisé</option>
+            <option>Audit gratuit</option>
+            <option>Site web intelligent</option>
+            <option>Chatbot IA</option>
+            <option>Automatisation</option>
+            <option>Agent IA</option>
             <option>Je ne sais pas encore</option>
           </select>
         </div>
@@ -750,44 +516,47 @@
       </div>
       <div class="form-group">
         <label>Décrivez votre situation</label>
-        <textarea name="message" rows="5" placeholder="Quel problème voulez-vous résoudre ? Quelles tâches vous prennent le plus de temps chaque semaine ?" required></textarea>
+        <textarea name="message" rows="5" placeholder="Quel problème voulez-vous résoudre ?" required></textarea>
       </div>
       <button type="submit" class="form-submit">
         Envoyer ma demande
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M17 7H7M17 7v10"/></svg>
       </button>
       <p class="form-note">Réponse sous 24h · Sans engagement · 100% confidentiel</p>
     </form>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- 11. FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <p class="footer-logo">Automex<em>AI</em></p>
-        <p class="footer-tagline">Web · Automatisation · Intégration IA</p>
-      </div>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <p class="footer-logo">AUTOMEX<span>-AI</span></p>
+      <p class="footer-tagline">Sites web intelligents, chatbots IA et automatisations pour PME qui veulent avancer sans se perdre dans la technique.</p>
     </div>
-    <div class="footer-divider">
-      <span class="orn">◆</span>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="#services">Services</a>
+      <a href="#secteurs">Solutions</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#apropos">À propos</a>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 Automex-AI · Cotonou, Bénin</p>
-      <p>Sites Web · Automatisation IA · Intégration IA</p>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="https://wa.me/22950131805" target="_blank" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347Z"/></svg>WhatsApp</a>
+      <a href="mailto:abdoulrazack607@gmail.com" class="contact-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/><polyline points="22 6 12 13 2 6"/></svg>Email</a>
+    </div>
+    <div class="footer-bottom" style="grid-column:1/-1">
+      <p>© 2026 Automex-AI · Cotonou, Bénin</p>
+      <p>Sites Web · Chatbots IA · Automatisations</p>
     </div>
   </div>
 </footer>
 
 <div id="toast"></div>
 
-<!-- WHATSAPP FLOTTANT -->
-<a href="https://wa.me/22950131805?text=Bonjour%2C%20j%27ai%20vu%20votre%20portfolio%20Automex-AI%20et%20j%27aimerais%20discuter%20d%27un%20projet." 
-   target="_blank" class="whatsapp-float" aria-label="Contacter sur WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
+<a href="https://wa.me/22950131805?text=Bonjour%2C%20j%27ai%20vu%20votre%20site%20Automex-AI%20et%20j%27aimerais%20discuter%20d%27un%20projet." target="_blank" class="whatsapp-float" aria-label="Contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
 </a>
 
 <script src="js/main.js"></script>
