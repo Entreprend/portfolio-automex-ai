@@ -220,7 +220,14 @@ section{padding:var(--section-pad) 0}
 /* ── Automatisations en action ── */
 .auto-showcase{margin-top:80px}
 .auto-showcase-title{font-size:22px;text-align:center;margin-bottom:32px}
-.auto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.auto-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.auto-result{
+  display:flex;gap:10px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);
+  border-radius:12px;padding:12px 14px;margin-top:16px;
+}
+.auto-result svg{width:16px;height:16px;color:var(--success);flex-shrink:0;margin-top:2px}
+.auto-result-label{font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--success);font-weight:700;margin-bottom:2px}
+.auto-result-val{font-size:13px;color:var(--text)}
 .auto-card{
   background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);
   overflow:hidden;
@@ -477,6 +484,7 @@ footer{background:var(--surface);border-top:1px solid var(--card-border);padding
   .hero-inner{padding:0 24px}
   .problem-grid{grid-template-columns:1fr}
   .solutions-grid{grid-template-columns:1fr}
+  .auto-grid{grid-template-columns:1fr}
   .secteurs-grid{grid-template-columns:repeat(2,1fr)}
   .benefits-grid{grid-template-columns:1fr}
   .timeline{grid-template-columns:1fr}
